@@ -26,17 +26,20 @@ const useStyles = makeStyles(() => ({
 
     }
 }));
+
+
+
 const BannerSlide = () => {
     const classes = useStyles(); // Invoke the useStyles function to get classes
 
 
 
-    return <div className={classes.bannerSlide}>
+    return <div className={classes.bannerSlide}>  
           <Container className={classes.bannerContent}>
              <div className={classes.titleLine}>
 
                    <Typography  variant='h2' style={{ fontWeight:'bold', marginBottom:15,fontFamily:"Montserrat", textAlign:"center"}}>
-                     Crypto Sprint
+                     Cryptó Sprint
                      <Typography style={{color:'darkgray',fontFamily:'montserrat'}}>
                      Provide comprehensive information about your cryptography
                      </Typography>

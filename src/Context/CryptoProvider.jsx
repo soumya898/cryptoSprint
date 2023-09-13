@@ -1,14 +1,15 @@
 import React,{useState,useEffect} from 'react'
 
-import cryptoContext from "./ContextApi"
+import cryptoContext from "./ContextApi" // globl obj
 
 
 
 
-const CryptoProvider = (props) => {
+const CryptoProvider = ({children}) => {
 
 const[currency,setCurrency]=useState('USD');
 const[symbol,setSymbol]=useState('$')
+
 useEffect(()=>{
 
     if(currency=='USD') setSymbol('$')
@@ -21,9 +22,9 @@ useEffect(()=>{
 
     return (
 
-        <cryptoContext.Provider value={{currency,symbol,setCurrency}}>
+        <cryptoContext.Provider value={{currency,symbol,setCurrency,setSymbol}}>
 
-            {props.children}
+            {children}
         </cryptoContext.Provider>
 
     )

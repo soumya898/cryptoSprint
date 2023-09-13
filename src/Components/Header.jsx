@@ -17,8 +17,8 @@ const Header = () => {
   }));
 
   const classes = useStyles();
-  const navigate = useNavigate();
-const { currency,setCurrency}=Cryptostate()
+  const navigate = useNavigate();  // to naviage 
+const { currency,setCurrency}=Cryptostate() // is  same kind of thing like consumer
 
  console.log(currency)
   // Create a dark theme
@@ -33,7 +33,7 @@ const { currency,setCurrency}=Cryptostate()
 
   return (
     <div>
-      {/* Apply the dark theme */}
+      {/* Apply the dark theme to whole page  */}
       <ThemeProvider theme={darkTheme}>
         {/* The AppBar */}
         <AppBar color='transparent' position='static' className={classes.title}>
@@ -44,7 +44,10 @@ const { currency,setCurrency}=Cryptostate()
               <Typography onClick={() => navigate('/')} className={classes.typography} style={{fontSize:'2rem'}}>
               CryptóSprint
               </Typography>
+
+
               {/* Right side Select for currency selection */}
+              
               <Select variant='outlined' style={{ width: 100, height: 40,marginRight:15 }}
                value={currency}
               onChange={(e)=>setCurrency(e.target.value)}

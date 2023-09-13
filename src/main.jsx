@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import CryptoProvider from './Context/CryptoProvider.jsx';
 
 import 'react-alice-carousel/lib/alice-carousel.css';
+
 ReactDOM.render(
   <BrowserRouter>
     <CryptoProvider>
