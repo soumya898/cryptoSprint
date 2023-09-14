@@ -46,7 +46,7 @@ const Carousel = () => {
          const data = await response.json();
          setTrendingCoins(data);
       } catch (error) {
-         console.error('Error fetching trending coins:', error);
+         console.error('Error fetching trending coins:', error.message);
       }
    };
 
